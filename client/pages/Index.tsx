@@ -190,9 +190,9 @@ const Index = () => {
                     ease: "linear",
                   }}
                 >
-                   <div 
+                   <div
                     className="relative"
-                    style={{ transform: `translateX(${window.innerWidth > 768 ? 200 : 120}px) rotate(-${i * 90}px)` }}
+                    style={{ transform: `translateX(${typeof window !== 'undefined' && window.innerWidth > 768 ? 200 : 120}px) rotate(-${i * 90}px)` }}
                    >
                      <motion.div
                        animate={{ rotate: [0, -360] }}
