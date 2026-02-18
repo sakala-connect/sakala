@@ -153,18 +153,21 @@ const Index = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="relative aspect-video lg:aspect-square rounded-[3rem] overflow-hidden shadow-2xl group border-8 border-white/50"
+              /* Added aspect-square for mobile to prevent rectangle stretching */
+              className="relative aspect-square lg:aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group border-4 md:border-8 border-white/50"
             >
               <img 
                 src="/1.png" 
                 alt="Mission Background" 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
               />
-              <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all duration-500" />
-              <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-8 md:p-12 text-white">
-                 <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block drop-shadow-md">Core Philosophy</span>
-                 <h3 className="text-3xl md:text-4xl font-bold mb-6 drop-shadow-lg">Our Mission</h3>
-                 <p className="text-lg md:text-xl font-medium italic leading-relaxed drop-shadow-md">
+              <div className="absolute inset-0 bg-primary/40 backdrop-blur-[1px] group-hover:backdrop-blur-none transition-all duration-500" />
+              
+              <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-4 md:p-12 text-white">
+                 <span className="text-accent font-bold uppercase tracking-widest text-[10px] md:text-sm mb-2 md:mb-4 block drop-shadow-md">Core Philosophy</span>
+                 <h3 className="text-xl md:text-4xl font-bold mb-2 md:mb-6 drop-shadow-lg">Our Mission</h3>
+                 {/* Reduced font size (text-xs) and added horizontal padding (px-2) to ensure text fits in the square */}
+                 <p className="text-xs md:text-xl font-medium italic leading-relaxed drop-shadow-md px-2 md:px-0">
                    "To create a supportive ecosystem where therapeutic excellence meets empathetic care, fostering independence and confidence."
                  </p>
               </div>
