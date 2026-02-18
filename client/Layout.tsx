@@ -1,6 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { ParticlesBackground } from "./components/ParticlesBackground";
+import { ScrollToTopOnNavigation } from "./components/ScrollToTopOnNavigation"; // Import the new component
 import { motion } from "framer-motion";
 
 interface LayoutProps {
@@ -21,6 +22,7 @@ export const Layout = ({ children }: LayoutProps) => {
           {children}
         </motion.div>
       </main>
+      <ScrollToTopOnNavigation /> {/* Add it here */}
       <Footer />
     </div>
   );

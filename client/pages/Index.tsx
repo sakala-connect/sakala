@@ -43,16 +43,14 @@ const Index = () => {
 
   return (
     <div className="w-full">
-      {/* --- HERO SECTION (Updated: Reference-based Minimalist Aesthetic) --- */}
+      {/* --- HERO SECTION --- */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background Image Layer - Empathy & Connection */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/3.jpg" 
             alt="Connection and Support" 
             className="w-full h-full object-cover object-center grayscale-[20%] brightness-[95%]"
           />
-          {/* Reference-style Gradient Overlay (Ensures text readability like Ramp/11x) */}
           <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent dark:from-black/80 dark:via-black/20" />
         </div>
 
@@ -64,15 +62,12 @@ const Index = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-left"
             >
-              {/* Trust Badge - Reference: Ramp 2,000+ reviews */}
               <div className="flex items-center gap-2 mb-6 bg-primary/10 w-fit px-4 py-1.5 rounded-full border border-primary/20">
                 <Star size={14} className="fill-primary text-primary" />
                 <span className="text-xs font-bold tracking-widest uppercase text-primary">Trusted by 500+ Families</span>
               </div>
 
-              <motion.h1 
-                className="text-6xl md:text-8xl font-telugu font-bold text-foreground mb-6 leading-[1.1]"
-              >
+              <motion.h1 className="text-6xl md:text-8xl font-telugu font-bold text-foreground mb-6 leading-[1.1]">
                 స-kala
               </motion.h1>
               
@@ -102,14 +97,12 @@ const Index = () => {
                 </button>
               </div>
 
-              {/* Reference-style Subtext */}
               <p className="mt-8 text-sm text-muted-foreground font-medium flex items-center gap-2">
                 <ShieldCheck size={16} className="text-primary" />
                 Evidence-based practices & Compassionate care
               </p>
             </motion.div>
 
-            {/* Subtle 3D Interactive Layer */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -124,70 +117,63 @@ const Index = () => {
         </div>
       </section>
 
-      {/* --- OUR MISSION (Updated with Background Image) --- */}
-<section className="py-24 px-6 bg-gradient-to-b from-transparent to-primary/5">
-  <div className="max-w-7xl mx-auto">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-      >
-        <GlassCard className="p-8 md:p-12 border-l-8 border-primary shadow-2xl border-none bg-white/60">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">A space where every ability is valued.</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            At స-kala, we believe in a holistic approach to development. Our multidisciplinary team works collaboratively to provide personalized care that nurtures growth and empowers individuals to reach their full potential.
-          </p>
-          <div className="flex flex-wrap items-center gap-6">
-             <div className="flex -space-x-4">
-                {[1,2,3,4].map(i => (
-                  <div key={i} className="w-14 h-14 rounded-full border-4 border-white bg-secondary flex items-center justify-center text-sm font-bold shadow-md group hover:z-50 transition-all cursor-default">
-                    {i}
-                  </div>
-                ))}
-             </div>
-             <div className="space-y-1">
-                <p className="font-bold text-lg">Trusted Experts</p>
-                <div className="flex gap-1 text-accent fill-accent">
-                   {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+      {/* --- OUR MISSION --- */}
+      <section className="py-24 px-6 bg-gradient-to-b from-transparent to-primary/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <GlassCard className="p-8 md:p-12 border-l-8 border-primary shadow-2xl border-none bg-white/60">
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">A space where every ability is valued.</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  At స-kala, we believe in a holistic approach to development. Our multidisciplinary team works collaboratively to provide personalized care that nurtures growth and empowers individuals to reach their full potential.
+                </p>
+                <div className="flex flex-wrap items-center gap-6">
+                   <div className="flex -space-x-4">
+                      {[1,2,3,4].map(i => (
+                        <div key={i} className="w-14 h-14 rounded-full border-4 border-white bg-secondary flex items-center justify-center text-sm font-bold shadow-md group hover:z-50 transition-all cursor-default">
+                          {i}
+                        </div>
+                      ))}
+                   </div>
+                   <div className="space-y-1">
+                      <p className="font-bold text-lg">Trusted Experts</p>
+                      <div className="flex gap-1 text-accent fill-accent">
+                         {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+                      </div>
+                   </div>
                 </div>
-             </div>
+              </GlassCard>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-video lg:aspect-square rounded-[3rem] overflow-hidden shadow-2xl group border-8 border-white/50"
+            >
+              <img 
+                src="/1.png" 
+                alt="Mission Background" 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+              />
+              <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all duration-500" />
+              <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-8 md:p-12 text-white">
+                 <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block drop-shadow-md">Core Philosophy</span>
+                 <h3 className="text-3xl md:text-4xl font-bold mb-6 drop-shadow-lg">Our Mission</h3>
+                 <p className="text-lg md:text-xl font-medium italic leading-relaxed drop-shadow-md">
+                   "To create a supportive ecosystem where therapeutic excellence meets empathetic care, fostering independence and confidence."
+                 </p>
+              </div>
+            </motion.div>
           </div>
-        </GlassCard>
-      </motion.div>
-
-      {/* --- Mission Card with Background Image --- */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="relative aspect-video lg:aspect-square rounded-[3rem] overflow-hidden shadow-2xl group border-8 border-white/50"
-      >
-        {/* Background Image Layer */}
-        <img 
-          src="/1.png" 
-          alt="Mission Background" 
-          className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-        />
-        
-        {/* Dark/Gradient Overlay for Readability */}
-        <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all duration-500" />
-        
-        {/* Text Content Overlay */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-8 md:p-12 text-white">
-           
-           <span className="text-accent font-bold uppercase tracking-widest text-sm mb-4 block drop-shadow-md">Core Philosophy</span>
-           <h3 className="text-3xl md:text-4xl font-bold mb-6 drop-shadow-lg">Our Mission</h3>
-           <p className="text-lg md:text-xl font-medium italic leading-relaxed drop-shadow-md">
-             "To create a supportive ecosystem where therapeutic excellence meets empathetic care, fostering independence and confidence."
-           </p>
         </div>
-      </motion.div>
-    </div>
-  </div>
-</section>
+      </section>
 
-      {/* --- SERVICES (Icon Hover Logic) --- */}
+      {/* --- SERVICES --- */}
       <section className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
@@ -205,25 +191,22 @@ const Index = () => {
                 transition={{ delay: idx * 0.05 }}
                 viewport={{ once: true }}
               >
+                {/* Update: Added 'dark:group-hover:text-primary' to ensure text color changes 
+                   to purple on hover in dark mode so it doesn't wash out against white background.
+                */}
                 <GlassCard className={`h-full group hover:bg-white hover:shadow-2xl transition-all duration-500 border-none ${service.comingSoon ? "opacity-75" : ""}`}>
                   <div className="w-16 h-16 bg-secondary/30 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                     <service.icon size={32} />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 flex items-center justify-between">
+                  <h3 className="text-2xl font-bold mb-4 flex items-center justify-between dark:group-hover:text-primary transition-colors duration-300">
                     {service.title}
                     {service.comingSoon && (
                       <span className="text-[10px] uppercase tracking-widest bg-accent/30 text-accent-foreground px-2 py-1 rounded-full font-bold">Soon</span>
                     )}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6 dark:group-hover:text-primary/80 transition-colors duration-300">
                     {service.desc}
                   </p>
-                  {!service.comingSoon && (
-                    <button className="text-primary font-bold flex items-center gap-2 group/btn mt-auto">
-                      Explore Service 
-                      <ArrowRight size={18} className="group-hover/btn:translate-x-2 transition-transform" />
-                    </button>
-                  )}
                 </GlassCard>
               </motion.div>
             ))}
@@ -231,7 +214,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* --- HOLISTIC APPROACH (Side-by-Side Reveal) --- */}
+      {/* --- HOLISTIC APPROACH --- */}
       <section className="py-32 px-6 bg-white/50 dark:bg-black/20 overflow-hidden">
         <div className="max-w-7xl mx-auto">
            <h2 className="text-5xl font-bold mb-20 text-center">Our Approach</h2>
@@ -254,8 +237,8 @@ const Index = () => {
                          <item.icon size={28} />
                       </div>
                       <div>
-                         <h3 className="text-xl font-bold mb-1">{item.name}</h3>
-                         <p className="text-muted-foreground">{item.desc}</p>
+                         <h3 className="text-xl font-bold mb-1 dark:group-hover:text-primary transition-colors">{item.name}</h3>
+                         <p className="text-muted-foreground dark:group-hover:text-primary/70 transition-colors">{item.desc}</p>
                       </div>
                    </motion.div>
                  ))}
@@ -278,7 +261,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* --- WHO WE SUPPORT (Yellow Hover Fill) --- */}
+      {/* --- WHO WE SUPPORT --- */}
       <section className="py-32 px-6 overflow-hidden bg-primary/5">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-5xl font-bold mb-6 italic">Who We Support</h2>
@@ -299,7 +282,6 @@ const Index = () => {
                 <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{item}</h3>
               </GlassCard>
             ))}
-            {/* Infinite Scroll Re-mapping */}
             {[
               "Children with delays", "Speech challenges", "Neuro-developmental", "Learning differences", 
               "Emotional concerns", "Adolescents", "Adults", "Couples & Families"
@@ -318,7 +300,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* --- FOOTER CTA (WhatsApp Redirect) --- */}
+      {/* --- FOOTER CTA --- */}
       <section className="py-32 px-6">
         <GlassCard className="max-w-5xl mx-auto bg-primary text-white border-none p-12 md:p-20 text-center overflow-hidden relative shadow-2xl">
           <div className="absolute top-0 right-0 w-80 h-80 bg-accent/20 blur-[100px] rounded-full -mr-40 -mt-40 animate-pulse" />
