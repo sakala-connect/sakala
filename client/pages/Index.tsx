@@ -261,44 +261,59 @@ const Index = () => {
         </div>
       </section>
 
-      {/* --- WHO WE SUPPORT --- */}
-      <section className="py-32 px-6 overflow-hidden bg-primary/5">
+      {/* --- WHO WE SUPPORT (Updated for 6-card visibility on Mobile) --- */}
+      <section className="py-20 md:py-32 px-2 md:px-6 overflow-hidden bg-primary/5">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-6 italic">Who We Support</h2>
-          <p className="text-xl text-muted-foreground mb-20">Empowering growth across all developmental stages.</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 italic text-foreground">Who We Support</h2>
+          <p className="text-base md:text-xl text-muted-foreground mb-12 md:mb-20 px-4">Empowering growth across all developmental stages.</p>
           
-          <div className="flex gap-8 animate-scroll hover:[animation-play-state:paused] cursor-grab active:cursor-grabbing">
+          {/* Reduced gap to 'gap-2' on mobile to fit more cards horizontally */}
+          <div className="flex gap-2 md:gap-8 animate-scroll hover:[animation-play-state:paused] cursor-grab active:cursor-grabbing">
             {[
               "Children with delays", "Speech challenges", "Neuro-developmental", "Learning differences", 
               "Emotional concerns", "Adolescents", "Adults", "Couples & Families"
             ].map((item, i) => (
               <GlassCard 
                 key={i} 
-                className="min-w-[300px] p-12 text-center flex-shrink-0 group hover:border-accent transition-all duration-500 shadow-lg border-none bg-white/40"
+                /* Changed min-w to [110px] on mobile to fit ~3-4 cards in the viewport at once */
+                className="min-w-[110px] md:min-w-[300px] p-3 md:p-12 text-center flex-shrink-0 group hover:border-accent transition-all duration-500 shadow-lg border-none bg-white/40"
               >
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-2xl group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 transition-all duration-300 shadow-sm">
+                <div className="w-8 h-8 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 md:mb-6 text-primary font-bold text-sm md:text-2xl group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 transition-all duration-300 shadow-sm">
                   {i + 1}
                 </div>
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{item}</h3>
+                {/* Adjusted text size for mobile to ensure the 6 cards are readable and don't wrap too much */}
+                <h3 className="text-[10px] md:text-xl font-bold group-hover:text-primary transition-colors text-foreground leading-tight">{item}</h3>
               </GlassCard>
             ))}
+            {/* Infinite Scroll Re-mapping */}
             {[
               "Children with delays", "Speech challenges", "Neuro-developmental", "Learning differences", 
               "Emotional concerns", "Adolescents", "Adults", "Couples & Families"
             ].map((item, i) => (
               <GlassCard 
                 key={`dup-${i}`} 
-                className="min-w-[300px] p-12 text-center flex-shrink-0 group hover:border-accent transition-all duration-500 shadow-lg border-none bg-white/40"
+                className="min-w-[110px] md:min-w-[300px] p-3 md:p-12 text-center flex-shrink-0 group hover:border-accent transition-all duration-500 shadow-lg border-none bg-white/40"
               >
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-2xl group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 transition-all duration-300 shadow-sm">
+                <div className="w-8 h-8 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 md:mb-6 text-primary font-bold text-sm md:text-2xl group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 transition-all duration-300 shadow-sm">
                   {i + 1}
                 </div>
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{item}</h3>
+                <h3 className="text-[10px] md:text-xl font-bold group-hover:text-primary transition-colors text-foreground leading-tight">{item}</h3>
               </GlassCard>
             ))}
           </div>
         </div>
       </section>
+
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+          /* Animation speed set to 15s to make it move fast across the screen */
+          animation: scroll 15s linear infinite;
+        }
+      `}</style>
 
       {/* --- FOOTER CTA --- */}
       <section className="py-32 px-6">
@@ -329,15 +344,7 @@ const Index = () => {
         </GlassCard>
       </section>
       
-      <style>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-scroll {
-          animation: scroll 40s linear infinite;
-        }
-      `}</style>
+      
     </div>
   );
 };
