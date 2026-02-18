@@ -16,7 +16,7 @@
     --popover-foreground: 210 29% 24%;
 
     /* Pastel Purple #D7BDE2 */
-    --primary: 282 33% 81%;
+    --primary: 282 90% 70%;
     --primary-foreground: 210 29% 24%;
 
     /* Blue #AED6F1 */
@@ -24,7 +24,7 @@
     --secondary-foreground: 210 29% 24%;
 
     /* Soft Yellow #FFFACD */
-    --accent: 54 100% 93%;
+    --accent:48 100% 67% ;
     --accent-foreground: 210 29% 24%;
 
     --muted: 210 20% 90%;
