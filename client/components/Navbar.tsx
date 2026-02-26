@@ -10,58 +10,45 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
+  { name: "Training Programs", path: "/training-programs" },
+  { name: "Workshops", path: "/workshops" },
 ];
 
 export const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-        isScrolled ? "py-3" : "py-6"
-      )}
-    >
-      <div
-        className={cn(
-          "max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex items-center justify-between transition-all duration-500",
-          isScrolled ? "bg-white/40 dark:bg-black/40" : "bg-transparent border-transparent shadow-none"
-        )}
-      >
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="text-3xl font-telugu font-bold text-primary group-hover:scale-110 transition-transform">
-            స-kala
-          </span>
-          <div className="hidden sm:block h-6 w-px bg-border/50 mx-2" />
-          <span className="hidden sm:block text-xl font-bold tracking-tighter">
-            SAKALA
-          </span>
+    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6">
+      <div className="max-w-7xl mx-auto glass rounded-full px-6 py-2 flex items-center justify-between border border-white/20 shadow-xl bg-white/40 dark:bg-black/40 backdrop-blur-md">
+        
+        <Link to="/" className="flex items-center group">
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-[#4cbbcc] shadow-md bg-white flex items-center justify-center"
+          >
+            <img 
+              src="/logo.jpeg" 
+              alt="Sakala Logo" 
+              className="w-full h-full object-contain p-1"
+            />
+          </motion.div>
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Menu - Refined Font Sizes */}
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className="text-sm font-semibold hover:text-primary transition-colors relative group"
+              className="text-[13px] font-semibold tracking-wider text-foreground/70 hover:text-[#4cbbcc] transition-colors relative group uppercase"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#4cbbcc] transition-all group-hover:w-full" />
             </Link>
           ))}
           <ThemeToggle />
-          <button className="bg-primary text-primary-foreground px-6 py-2.5 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/20 flex items-center gap-2">
-            <Phone size={18} />
+          <button className="bg-[#4cbbcc] text-white px-6 py-2 rounded-full text-[13px] font-bold hover:scale-105 transition-all shadow-lg flex items-center gap-2">
+            <Phone size={14} />
             Book Now
           </button>
         </div>
@@ -69,35 +56,33 @@ export const Navbar = () => {
         {/* Mobile Toggle */}
         <div className="flex items-center gap-4 md:hidden">
           <ThemeToggle />
-          <button
-            className="p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+          <button className="p-2 text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden absolute top-full left-6 right-6 mt-4 glass rounded-2xl p-6 flex flex-col gap-4 shadow-2xl"
+            className="md:hidden absolute top-full left-6 right-6 mt-4 glass rounded-[2rem] p-6 flex flex-col gap-4 shadow-2xl bg-white/95 dark:bg-black/95 border border-white/20"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg font-semibold border-b border-border/20 pb-2"
+                className="text-sm font-bold text-foreground/90 border-b border-border/10 pb-2 active:text-[#4cbbcc] uppercase tracking-wide"
               >
                 {link.name}
               </Link>
             ))}
-            <button className="bg-primary text-primary-foreground px-6 py-3 rounded-xl font-bold mt-2">
+            <button className="bg-[#4cbbcc] text-white px-6 py-3 rounded-xl font-bold mt-2 shadow-lg flex items-center justify-center gap-2">
+              <Phone size={18} />
               Book Now
             </button>
           </motion.div>

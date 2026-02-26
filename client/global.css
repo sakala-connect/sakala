@@ -7,7 +7,7 @@
 @layer base {
   :root {
     --background: 210 20% 98%;
-    --foreground: 210 29% 24%;
+    --foreground: 327 20% 20%;
 
     --card: 0 0% 100% / 0.7;
     --card-foreground: 210 29% 24%;
@@ -15,16 +15,15 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 29% 24%;
 
-    /* Pastel Purple #D7BDE2 */
-    --primary: 282 90% 70%;
+    --primary: 327 52% 56%;
     --primary-foreground: 210 29% 24%;
 
     /* Blue #AED6F1 */
-    --secondary: 204 70% 81%;
+    --secondary: 188 56% 55%;
     --secondary-foreground: 210 29% 24%;
 
     /* Soft Yellow #FFFACD */
-    --accent:48 100% 67% ;
+    --accent:38 92% 61%;
     --accent-foreground: 210 29% 24%;
 
     --muted: 210 20% 90%;
@@ -37,28 +36,35 @@
     --input: 210 29% 80%;
     --ring: 282 33% 70%;
 
+    /* Additional palette colors for depth */
+    --brand-purple: 253 66% 70%;  /* #957fe5 */
+    --brand-green: 149 56% 55%;   /* #4ecc74 */
+
     --radius: 1rem;
   }
 
   .dark {
-    --background: 210 29% 10%;
+    --background: 210 29% 6%;
     --foreground: 210 20% 98%;
 
-    --card: 210 29% 15% / 0.7;
+    --card: 210 29% 10% / 0.8;
     --card-foreground: 210 20% 98%;
 
-    --primary: 282 33% 40%;
-    --primary-foreground: 210 20% 98%;
+    /* Brand Pink #c95994 */
+    --primary: 327 52% 56%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 204 70% 40%;
-    --secondary-foreground: 210 20% 98%;
+    /* Brand Blue #4cbbcc */
+    --secondary: 188 56% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 54 100% 30%;
-    --accent-foreground: 210 20% 98%;
+    /* Brand Yellow #f6b040 */
+    --accent: 38 92% 61%;
+    --accent-foreground: 210 29% 24%;
 
-    --border: 210 29% 20%;
-    --input: 210 29% 20%;
-    --ring: 282 33% 50%;
+    --border: 327 20% 20%;
+    --input: 327 20% 20%;
+    --ring: 188 56% 55%;
   }
 }
 

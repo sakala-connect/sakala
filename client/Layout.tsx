@@ -13,16 +13,10 @@ export const Layout = ({ children }: LayoutProps) => {
     <div className="relative min-h-screen flex flex-col">
       <ParticlesBackground />
       <Navbar />
-      <main className="flex-grow pt-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {children}
-        </motion.div>
+      {/* main tag should have ZERO top padding to allow hero to hit the very top */}
+      <main className="flex-grow"> 
+        {children}
       </main>
-      <ScrollToTopOnNavigation /> {/* Add it here */}
       <Footer />
     </div>
   );

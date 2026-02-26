@@ -1,20 +1,8 @@
 import { motion } from "framer-motion";
 import { 
-  Speech, 
-  Brain, 
-  Activity, 
-  Users, 
-  HeartPulse, 
-  Puzzle, 
-  Stethoscope, 
-  GraduationCap, 
-  Phone,
-  ArrowRight,
-  ShieldCheck,
-  Zap,
-  Star,
-  Layers,
-  MessageCircle
+  Speech, Brain, Activity, Users, HeartPulse, Puzzle, 
+  Stethoscope, GraduationCap, Phone, ArrowRight, Star, MessageCircle,
+  Eye, Target, Heart, Sparkles, Footprints, ShieldCheck, Zap,CheckCircle2
 } from "lucide-react";
 import { GlassCard } from "@/components/GlassCard";
 import { Hero3D } from "@/components/Hero3D";
@@ -32,6 +20,14 @@ const services = [
   { icon: HeartPulse, title: "Counselling", desc: "Supportive counseling for individuals and families." },
 ];
 
+const missionGoals = [
+  { icon: Target, title: "Precision Care", text: "Deliver individualized intervention tailored to each child’s needs" },
+  { icon: Users, title: "Family Synergy", text: "Partner closely with families through guidance, training, and collaboration" },
+  { icon: Footprints, title: "Functional Growth", text: "Build functional skills that support independence in everyday life" },
+  { icon: Heart, title: "Safe Haven", text: "Create structured yet nurturing environments that encourage engagement" },
+  { icon: Sparkles, title: "Holistic Play", text: "Use play, interaction, and therapeutic strategies for development" },
+];
+
 const Index = () => {
   const navigate = useNavigate();
 
@@ -43,47 +39,55 @@ const Index = () => {
 
   return (
     <div className="w-full">
-      {/* --- HERO SECTION --- */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* --- NEW CREATIVE HERO SECTION --- */}
+<section className="relative h-screen w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <motion.img 
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 2, ease: "easeOut" }}
             src="/3.jpg" 
-            alt="Connection and Support" 
-            className="w-full h-full object-cover object-center grayscale-[20%] brightness-[95%]"
+            alt="Compassionate Care" 
+            className="w-full h-full object-cover object-center grayscale-[5%] brightness-[90%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent dark:from-black/80 dark:via-black/20" />
+          {/* Deep gradient to blend hero into navbar at the top */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-white dark:to-[#0a0a0b]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent dark:from-black/90" />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-20 z-10">
+        <div className="container mx-auto px-6 lg:px-20 z-10 pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
               className="text-left"
             >
-              <div className="flex items-center gap-2 mb-6 bg-primary/10 w-fit px-4 py-1.5 rounded-full border border-primary/20">
-                <Star size={14} className="fill-primary text-primary" />
-                <span className="text-xs font-bold tracking-widest uppercase text-primary">Trusted by 500+ Families</span>
-              </div>
-
-              <motion.h1 className="text-6xl md:text-8xl font-telugu font-bold text-foreground mb-6 leading-[1.1]">
-                స-kala
-              </motion.h1>
+              {/* Refined, smaller brand identifier */}
+              <h1 className="text-3xl md:text-4xl font-telugu font-bold text-[#c95994] mb-4 tracking-tight flex items-baseline gap-1">
+                స<span className="font-sans font-semibold tracking-tighter">KALA</span>
+              </h1>
               
-              <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-foreground/80 max-w-xl mb-8 leading-tight">
-                Digital care, <span className="text-primary italic">Human results.</span>
-                <span className="block text-lg md:text-xl font-normal mt-4 text-muted-foreground">
-                  Nurturing abilities and building confidence through personalized therapy for every stage of life.
-                </span>
+              {/* Heading with fixed line-height to prevent overlap */}
+              <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.05] mb-8">
+                Empowering <br />
+                <span className="text-[#4cbbcc] italic font-medium">every ability.</span>
               </h2>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              {/* Creative "Scientific Harmony" Message */}
+              <div className="max-w-md mb-10 space-y-4">
+                
+                <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                  A space where every ability is valued and every step forward matters
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5">
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => handleWhatsAppRedirect("Hello! I want to take the first step. Please guide me about your consultation process.")}
-                  className="bg-accent text-accent-foreground px-10 py-5 rounded-xl font-bold text-lg shadow-2xl flex items-center justify-center gap-3 transition-all hover:bg-accent/90"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => handleWhatsAppRedirect("Hello! I want to take the first step toward therapeutic care.")}
+                  className="bg-[#4cbbcc] text-white px-10 py-4 rounded-full font-bold text-base shadow-2xl shadow-[#4cbbcc]/40 flex items-center justify-center gap-3 transition-all"
                 >
                   Take the first step
                   <ArrowRight size={20} />
@@ -91,125 +95,112 @@ const Index = () => {
                 
                 <button 
                   onClick={() => navigate('/contact')}
-                  className="bg-white/50 backdrop-blur-md border border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/80 transition-all shadow-sm"
+                  className="bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/30 text-foreground px-10 py-4 rounded-full font-bold text-base hover:bg-white/60 transition-all"
                 >
                   Contact Us
                 </button>
               </div>
-
-              <p className="mt-8 text-sm text-muted-foreground font-medium flex items-center gap-2">
-                <ShieldCheck size={16} className="text-primary" />
-                Evidence-based practices & Compassionate care
-              </p>
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="hidden lg:block relative h-[500px]"
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 0.4 }} 
+              transition={{ delay: 0.5 }} 
+              className="hidden lg:block relative h-[600px]"
             >
-              <div className="absolute inset-0 opacity-40">
-                 <Hero3D />
-              </div>
+              <Hero3D />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* --- OUR MISSION --- */}
-      <section className="py-24 px-6 bg-gradient-to-b from-transparent to-primary/5">
+      {/* --- VISION & MISSION (SAME AS BEFORE) --- */}
+      <section className="py-24 px-6 relative overflow-hidden bg-white dark:bg-transparent">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32 items-center">
+            <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              className="lg:col-span-7 space-y-6"
             >
-              <GlassCard className="p-8 md:p-12 border-l-8 border-primary shadow-2xl border-none bg-white/60">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">A space where every ability is valued.</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  At స-kala, we believe in a holistic approach to development. Our multidisciplinary team works collaboratively to provide personalized care that nurtures growth and empowers individuals to reach their full potential.
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-[2px] bg-[#4cbbcc]" />
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#4cbbcc]">The Future</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-[1.1]">
+                Our Vision for an <span className="text-[#c95994]">Inclusive</span> World
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+                To create an inclusive and compassionate space where every individual is supported to grow, communicate, learn, and thrive in their own unique way.
+              </p>
+              <div className="p-6 bg-[#4cbbcc]/5 rounded-3xl border-l-4 border-[#4cbbcc]">
+                <p className="text-base font-medium text-foreground italic">
+                  సKALA envisions a community where differences are understood, strengths are nurtured, and meaningful independence becomes achievable for every child and family.
                 </p>
-                <div className="flex flex-wrap items-center gap-6">
-                   <div className="flex -space-x-4">
-                      {[1,2,3,4].map(i => (
-                        <div key={i} className="w-14 h-14 rounded-full border-4 border-white bg-secondary flex items-center justify-center text-sm font-bold shadow-md group hover:z-50 transition-all cursor-default">
-                          {i}
-                        </div>
-                      ))}
-                   </div>
-                   <div className="space-y-1">
-                      <p className="font-bold text-lg">Trusted Experts</p>
-                      <div className="flex gap-1 text-accent fill-accent">
-                         {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
-                      </div>
-                   </div>
-                </div>
-              </GlassCard>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              /* Added aspect-square for mobile to prevent rectangle stretching */
-              className="relative aspect-square lg:aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group border-4 md:border-8 border-white/50"
-            >
-              <img 
-                src="/1.png" 
-                alt="Mission Background" 
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-              />
-              <div className="absolute inset-0 bg-primary/40 backdrop-blur-[1px] group-hover:backdrop-blur-none transition-all duration-500" />
-              
-              <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-4 md:p-12 text-white">
-                 <span className="text-accent font-bold uppercase tracking-widest text-[10px] md:text-sm mb-2 md:mb-4 block drop-shadow-md">Core Philosophy</span>
-                 <h3 className="text-xl md:text-4xl font-bold mb-2 md:mb-6 drop-shadow-lg">Our Mission</h3>
-                 {/* Reduced font size (text-xs) and added horizontal padding (px-2) to ensure text fits in the square */}
-                 <p className="text-xs md:text-xl font-medium italic leading-relaxed drop-shadow-md px-2 md:px-0">
-                   "To create a supportive ecosystem where therapeutic excellence meets empathetic care, fostering independence and confidence."
-                 </p>
               </div>
             </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="lg:col-span-5 relative"
+            >
+              <div className="relative w-full aspect-[4/3] md:w-[80%] ml-auto rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white dark:border-white/10">
+                <img src="/1.png" alt="Vision" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-[#c95994]/10 mix-blend-multiply" />
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#4cbbcc]/20 rounded-full blur-2xl" />
+            </motion.div>
+          </div>
+
+          <div className="bg-[#f5f5f7] dark:bg-white/5 rounded-[3rem] p-8 md:p-20 relative overflow-hidden">
+             <div className="absolute top-0 right-0 w-64 h-64 bg-[#c95994]/5 blur-[100px] rounded-full" />
+             <div className="max-w-4xl mx-auto text-center mb-16">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-[#c95994]/10 text-[#c95994] text-[10px] font-bold uppercase tracking-widest mb-6">Our Mission</span>
+                <p className="text-xl md:text-3xl font-medium text-foreground leading-snug">
+                  "At సKALA, we provide personalized, evidence-based rehabilitational support that enhances communication, behavior, learning, and daily functioning."
+                </p>
+             </div>
+
+             <div className="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+                {missionGoals.map((goal, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col items-center text-center group"
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-white dark:bg-black/40 shadow-xl flex items-center justify-center text-[#4cbbcc] mb-6 group-hover:bg-[#4cbbcc] group-hover:text-white transition-all duration-500">
+                      <goal.icon size={24} />
+                    </div>
+                    <h4 className="text-sm font-bold text-foreground mb-2">{goal.title}</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed px-2">
+                      {goal.text}
+                    </p>
+                  </motion.div>
+                ))}
+             </div>
           </div>
         </div>
       </section>
 
       {/* --- SERVICES --- */}
-      <section className="py-32 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold mb-6">Our Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Supporting communication, behaviour, learning, and emotional well-being across all stages of life.
-            </p>
-          </div>
+      <section className="py-24 px-6 bg-[#f5f5f7] dark:bg-[#0a0a0b]">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-[#c95994] uppercase tracking-tight">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, idx) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.05 }}
-                viewport={{ once: true }}
-              >
-                {/* Update: Added 'dark:group-hover:text-primary' to ensure text color changes 
-                   to purple on hover in dark mode so it doesn't wash out against white background.
-                */}
-                <GlassCard className={`h-full group hover:bg-white hover:shadow-2xl transition-all duration-500 border-none ${service.comingSoon ? "opacity-75" : ""}`}>
-                  <div className="w-16 h-16 bg-secondary/30 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <service.icon size={32} />
+              <motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.05 }} viewport={{ once: true }}>
+                <GlassCard className="h-full group hover:bg-white dark:hover:bg-black/60 hover:shadow-2xl transition-all duration-500 border-none p-8 text-left">
+                  <div className="w-12 h-12 bg-[#4cbbcc]/10 rounded-xl flex items-center justify-center text-[#4cbbcc] mb-6 group-hover:bg-[#4cbbcc] group-hover:text-white transition-all">
+                    <service.icon size={24} />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 flex items-center justify-between dark:group-hover:text-primary transition-colors duration-300">
-                    {service.title}
-                    {service.comingSoon && (
-                      <span className="text-[10px] uppercase tracking-widest bg-accent/30 text-accent-foreground px-2 py-1 rounded-full font-bold">Soon</span>
-                    )}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6 dark:group-hover:text-primary/80 transition-colors duration-300">
-                    {service.desc}
-                  </p>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-[#c95994] transition-colors text-foreground">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-[14px]">{service.desc}</p>
                 </GlassCard>
               </motion.div>
             ))}
@@ -217,137 +208,21 @@ const Index = () => {
         </div>
       </section>
 
-      {/* --- HOLISTIC APPROACH --- */}
-      <section className="py-32 px-6 bg-white/50 dark:bg-black/20 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-           <h2 className="text-5xl font-bold mb-20 text-center">Our Approach</h2>
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-4">
-                 {[
-                   { name: "Personalized", icon: ShieldCheck, color: "bg-purple-100", desc: "Individualized, goal-based therapy plans tailored to your pace." },
-                   { name: "Functional", icon: Zap, color: "bg-blue-100", desc: "Focus on real-life skills that build immediate independence." },
-                   { name: "Family-Centered", icon: Users, color: "bg-yellow-100", desc: "Collaborative work with families to ensure long-term success." },
-                   { name: "Supportive", icon: HeartPulse, color: "bg-purple-100", desc: "A warm, inclusive environment where every milestone is celebrated." }
-                 ].map((item, i) => (
-                   <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    key={i} 
-                    className="flex gap-6 p-6 rounded-3xl hover:bg-white transition-colors group cursor-default shadow-sm hover:shadow-md"
-                   >
-                      <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform`}>
-                         <item.icon size={28} />
-                      </div>
-                      <div>
-                         <h3 className="text-xl font-bold mb-1 dark:group-hover:text-primary transition-colors">{item.name}</h3>
-                         <p className="text-muted-foreground dark:group-hover:text-primary/70 transition-colors">{item.desc}</p>
-                      </div>
-                   </motion.div>
-                 ))}
-              </div>
-              <div className="relative">
-                 <div className="aspect-square glass rounded-[4rem] overflow-hidden relative border-8 border-white/50 shadow-2xl">
-                    <img 
-                      src="/2.png" 
-                      alt="Professional Therapy" 
-                      className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-                    <div className="absolute bottom-12 left-12 text-white">
-                       <p className="text-4xl font-telugu font-bold">స-kala Core</p>
-                       <p className="uppercase tracking-[0.3em] text-sm font-bold opacity-90">Methodology</p>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-      </section>
-
-      {/* --- WHO WE SUPPORT (Updated for 6-card visibility on Mobile) --- */}
-      <section className="py-20 md:py-32 px-2 md:px-6 overflow-hidden bg-primary/5">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 italic text-foreground">Who We Support</h2>
-          <p className="text-base md:text-xl text-muted-foreground mb-12 md:mb-20 px-4">Empowering growth across all developmental stages.</p>
-          
-          {/* Reduced gap to 'gap-2' on mobile to fit more cards horizontally */}
-          <div className="flex gap-2 md:gap-8 animate-scroll hover:[animation-play-state:paused] cursor-grab active:cursor-grabbing">
-            {[
-              "Children with delays", "Speech challenges", "Neuro-developmental", "Learning differences", 
-              "Emotional concerns", "Adolescents", "Adults", "Couples & Families"
-            ].map((item, i) => (
-              <GlassCard 
-                key={i} 
-                /* Changed min-w to [110px] on mobile to fit ~3-4 cards in the viewport at once */
-                className="min-w-[110px] md:min-w-[300px] p-3 md:p-12 text-center flex-shrink-0 group hover:border-accent transition-all duration-500 shadow-lg border-none bg-white/40"
-              >
-                <div className="w-8 h-8 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 md:mb-6 text-primary font-bold text-sm md:text-2xl group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 transition-all duration-300 shadow-sm">
-                  {i + 1}
-                </div>
-                {/* Adjusted text size for mobile to ensure the 6 cards are readable and don't wrap too much */}
-                <h3 className="text-[10px] md:text-xl font-bold group-hover:text-primary transition-colors text-foreground leading-tight">{item}</h3>
-              </GlassCard>
-            ))}
-            {/* Infinite Scroll Re-mapping */}
-            {[
-              "Children with delays", "Speech challenges", "Neuro-developmental", "Learning differences", 
-              "Emotional concerns", "Adolescents", "Adults", "Couples & Families"
-            ].map((item, i) => (
-              <GlassCard 
-                key={`dup-${i}`} 
-                className="min-w-[110px] md:min-w-[300px] p-3 md:p-12 text-center flex-shrink-0 group hover:border-accent transition-all duration-500 shadow-lg border-none bg-white/40"
-              >
-                <div className="w-8 h-8 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 md:mb-6 text-primary font-bold text-sm md:text-2xl group-hover:bg-accent group-hover:text-accent-foreground group-hover:scale-110 transition-all duration-300 shadow-sm">
-                  {i + 1}
-                </div>
-                <h3 className="text-[10px] md:text-xl font-bold group-hover:text-primary transition-colors text-foreground leading-tight">{item}</h3>
-              </GlassCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <style>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-scroll {
-          /* Animation speed set to 15s to make it move fast across the screen */
-          animation: scroll 15s linear infinite;
-        }
-      `}</style>
-
       {/* --- FOOTER CTA --- */}
-      <section className="py-32 px-6">
-        <GlassCard className="max-w-5xl mx-auto bg-primary text-white border-none p-12 md:p-20 text-center overflow-hidden relative shadow-2xl">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-accent/20 blur-[100px] rounded-full -mr-40 -mt-40 animate-pulse" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/20 blur-[100px] rounded-full -ml-40 -mb-40" />
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 relative z-10 leading-tight">Ready to start?</h2>
-          <p className="text-xl opacity-90 mb-12 max-w-2xl mx-auto relative z-10 leading-relaxed font-medium">
-            Join the స-kala family and start a journey of growth and empowerment for you or your loved ones.
-          </p>
+      <section className="py-24 px-6">
+        <GlassCard className="max-w-5xl mx-auto bg-[#c95994] text-white border-none p-12 md:p-20 text-center overflow-hidden relative shadow-2xl rounded-[3rem]">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#f6b040]/30 blur-[100px] rounded-full -mr-40 -mt-40" />
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 relative z-10 leading-tight">Ready to start?</h2>
           <div className="flex flex-col md:flex-row gap-6 justify-center relative z-10">
-            <button 
-              onClick={() => handleWhatsAppRedirect("Hello! I would like to book a consultation for a therapy session.")}
-              className="bg-white text-primary px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 hover:bg-accent hover:text-accent-foreground transition-all flex items-center justify-center gap-3 shadow-lg"
-            >
-              <Phone size={24} />
-              Book Consultation
+            <button onClick={() => handleWhatsAppRedirect("Consultation request")} className="bg-white text-[#c95994] px-10 py-4 rounded-full font-bold text-lg hover:scale-105 hover:bg-[#f6b040] hover:text-white transition-all shadow-lg flex items-center justify-center gap-3">
+              <Phone size={20} /> Book Consultation
             </button>
-            <button 
-              onClick={() => navigate('/contact')}
-              className="bg-white/10 backdrop-blur-md border border-white/30 px-12 py-5 rounded-xl font-bold text-xl hover:bg-white/20 transition-all flex items-center justify-center gap-3"
-            >
-              <MessageCircle size={24} />
-              Contact Us
+            <button onClick={() => navigate('/contact')} className="bg-white/10 border border-white/30 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-3">
+              <MessageCircle size={20} /> Contact Us
             </button>
           </div>
         </GlassCard>
       </section>
-      
-      
     </div>
   );
 };
