@@ -198,17 +198,17 @@ const Contact = () => {
         </div>
         
         <div className="h-[400px] md:h-[550px] w-full rounded-[2.5rem] overflow-hidden border-4 border-white shadow-2xl relative">
-           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7454226162124!2d78.3475891751635!3d17.424003283467437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93715929d239%3A0x9697a1f4308beade!2sTNGO's%20Colony%20Phase%202%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500032!5e0!3m2!1sen!2sin!4v1740000000000!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-full"
-           ></iframe>
-        </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4610931640686!2d78.3349204!3d17.4376314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9384c165c0d1%3A0x89ee95f67d7177c2!2sTranquil%20Autumn%20Treats!5e0!3m2!1sen!2sin!4v1772387288769!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    className="w-full h-full"
+  ></iframe>
+</div>
       </section>
     </div>
   );

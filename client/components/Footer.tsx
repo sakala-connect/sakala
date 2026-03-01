@@ -89,7 +89,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/60 font-medium">
-          <p>© {new Date().getFullYear()} స-kala Therapy Center. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} సKALA Therapy Center. All rights reserved.</p>
           <div className="flex gap-8">
             <Link to="/privacy-policy" className="hover:text-[#4cbbcc] transition-colors">Privacy Policy</Link>
             <a href="#" className="hover:text-[#4cbbcc] transition-colors">Terms of Service</a>

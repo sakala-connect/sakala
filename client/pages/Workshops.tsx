@@ -150,7 +150,7 @@ const Workshops = () => {
                   <Mic2 size={48} strokeWidth={1} />
                 </div>
                 <div className="aspect-[3/4] rounded-3xl bg-[#f5f5f7] overflow-hidden border border-[#c95994]/20">
-                  <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80" className="w-full h-full object-cover" alt="Rhythm Workshop" />
+                  <img src="/music.jpeg" className="w-full h-full object-cover" alt="Rhythm Workshop" />
                 </div>
               </motion.div>
             </div>

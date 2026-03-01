@@ -117,7 +117,7 @@ const Index = () => {
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
-            src="/3.jpg" 
+            src="/home.jpeg" 
             alt="Hero Background" 
             className="w-full h-full object-cover grayscale-[5%] brightness-[90%]"
           />
@@ -161,19 +161,22 @@ const Index = () => {
               <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed font-medium">
                 To create an inclusive and compassionate space where every individual is supported to grow, communicate, learn, and thrive in their own unique way.
               </p>
-              <div className="p-6 bg-[#4cbbcc]/5 rounded-3xl border-l-4 border-[#4cbbcc]">
-                <p className="text-base font-semibold italic text-foreground">సKALA envisions a community where differences are understood and strengths are nurtured.</p>
+              
+              {/* INCREASED BOX PADDING AND TEXT SIZE HERE */}
+              <div className="p-8 md:p-10 bg-[#4cbbcc]/5 rounded-3xl border-l-4 border-[#4cbbcc]">
+                <p className="text-xl md:text-2xl font-semibold italic text-foreground leading-relaxed">సKALA envisions a community where differences are understood and strengths are nurtured.</p>
               </div>
+
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="lg:col-span-5">
               <img src="/1.png" className="rounded-[2.5rem] shadow-2xl border-4 border-white dark:border-white/10" alt="Vision" />
             </motion.div>
           </div>
 
-          <div className="bg-[#f5f5f7] dark:bg-white/5 rounded-[3rem] p-8 md:p-20 relative overflow-hidden">
+          <div className="bg-[#f5f5f7] dark:bg-white/5 rounded-[3rem] p-12 md:p-32 relative overflow-hidden">
              <div className="max-w-4xl mx-auto text-center mb-16 text-foreground">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-[#c95994]/10 text-[#c95994] text-[10px] font-bold uppercase tracking-widest mb-6">Our Mission</span>
-                <p className="text-xl md:text-3xl font-medium leading-snug">"At సKALA, we provide personalized support that enhances communication, behavior, and daily functioning."</p>
+                <p className="text-3xl md:text-5xl font-medium leading-tight">"At సKALA, we provide personalized support that enhances communication, behavior, and daily functioning."</p>
              </div>
              <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
                 {missionGoals.map((goal, idx) => (
@@ -188,6 +191,7 @@ const Index = () => {
              </div>
           </div>
         </div>
+        
       </section>
 
       {/* --- SERVICES SECTION (FIXED HEADING & 5-IN-A-ROW) --- */}

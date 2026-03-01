@@ -82,26 +82,27 @@ const SpeechTherapy = () => {
 
       {/* --- WHO WE SUPPORT --- */}
       <section className="py-32 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold tracking-tight">Who We <span className="text-[#4cbbcc] italic">Support</span></h2>
-            <p className="text-lg text-muted-foreground leading-relaxed font-medium">
-              Speech therapy services at సKALA support children with a wide range of communication needs, including speech and language delays, autism spectrum differences, developmental delays, intellectual disabilities, articulation difficulties, social communication challenges, and complex communication needs.
-            </p>
-            <p className="p-6 bg-[#4cbbcc]/5 rounded-2xl border-l-4 border-[#4cbbcc] font-bold italic">
-              "Each child is viewed as an individual, and therapy is designed to reflect their unique developmental profile and communication style."
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-             {/* Decorative icons for support areas */}
-             {[Speech, MessageSquare, Users, Heart].map((Icon, i) => (
-               <div key={i} className="aspect-square rounded-[2rem] bg-[#f5f5f7] dark:bg-white/5 flex items-center justify-center text-[#c95994]">
-                  <Icon size={48} strokeWidth={1.5} />
-               </div>
-             ))}
-          </div>
-        </div>
-      </section>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div className="space-y-8">
+      <h2 className="text-4xl font-bold tracking-tight">Who We <span className="text-[#4cbbcc] italic">Support</span></h2>
+      <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+        Speech therapy services at సKALA support children with a wide range of communication needs, including speech and language delays, autism spectrum disorders, developmental delays, intellectual disabilities, articulation disorders, social communication challenges, and complex communication needs.
+      </p>
+      <p className="p-6 bg-[#4cbbcc]/5 rounded-2xl border-l-4 border-[#4cbbcc] font-bold italic">
+        "Each child is viewed as an individual, and therapy is designed to reflect their unique developmental profile and communication style."
+      </p>
+    </div>
+    
+    {/* Added Image on the Right Side */}
+    <div className="relative">
+      <img 
+        src="/child.jpeg" 
+        alt="Who We Support" 
+        className="rounded-[2.5rem] shadow-2xl w-full object-cover border-4 border-white dark:border-white/10" 
+      />
+    </div>
+  </div>
+</section>
 
       {/* --- OUR CLINICAL PROCESS --- */}
       <section className="py-32 px-6 bg-[#0a0a0b] text-white rounded-[4rem] mx-4 relative overflow-hidden">
@@ -182,7 +183,7 @@ const SpeechTherapy = () => {
               </div>
            </div>
            <div className="relative rounded-[4rem] overflow-hidden shadow-2xl">
-              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80" alt="Home Support" className="w-full h-full object-cover" />
+              <img src="/hb.jpeg" alt="Home Support" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-[#c95994]/10" />
            </div>
         </div>
