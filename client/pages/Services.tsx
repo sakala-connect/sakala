@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/GlassCard";
 import { 
-  Speech, Brain, Activity, HeartPulse, GraduationCap, 
+  Speech, Smile, Shapes, Lightbulb, GraduationCap, 
   ArrowRight, Calendar, MessageCircle 
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -9,16 +9,16 @@ import { useNavigate } from "react-router-dom";
 const serviceList = [
   { 
     title: "Behavioral Therapy", 
-    icon: Brain, 
+    icon: Smile, 
     path: "/services/behavioral", 
     img: "/behavioral.jpg",
     side: "left"
   },
   { 
     title: "Psychotherapies", 
-    icon: HeartPulse, 
+    icon: Lightbulb, 
     path: "/services/psychotherapy", 
-    img: "/8.jpg",
+    img: "/speech1.jpeg",
     side: "right"
   },
   { 
@@ -30,7 +30,7 @@ const serviceList = [
   },
   { 
     title: "Occupational Therapy", 
-    icon: Activity, 
+    icon: Shapes, 
     path: "/services/occupational", 
     img: "/oc.jpeg",
     side: "right"

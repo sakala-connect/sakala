@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Mail, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Phone, MapPin, Instagram, Heart } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -27,10 +27,12 @@ export const Footer = () => {
               Nurturing abilities, building confidence. A premium space where every individual is valued and supported through expert therapeutic interventions.
             </p>
             <div className="flex gap-4 mt-8">
-              {[Instagram, Facebook, Linkedin].map((Icon, i) => (
+              {[Instagram].map((Icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href="https://www.instagram.com/sakala_connect?igsh=MWJ0aDE0anhncXQ5bA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:scale-110 transition-transform bg-white/10 hover:bg-white/20 text-white"
                 >
                   <Icon size={20} />
@@ -88,12 +90,32 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/60 font-medium">
-          <p>© {new Date().getFullYear()} సKALA Therapy Center. All rights reserved.</p>
-          <div className="flex gap-8">
-            <Link to="/privacy-policy" className="hover:text-[#4cbbcc] transition-colors">Privacy Policy</Link>
-            <a href="#" className="hover:text-[#4cbbcc] transition-colors">Terms of Service</a>
+        {/* ALIGNED TO CENTER TO MATCH THE IMAGE */}
+        <div className="pt-12 border-t border-white/10 flex flex-col items-center justify-center gap-4 text-xs text-white/60 font-medium text-center">
+          <div className="flex justify-center items-center gap-1">
+            Made with <Heart className="inline h-4 w-4 text-red-500 mx-1 fill-current" /> by
+            <a
+              href="https://staffarc.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-[#f6b040] hover:underline"
+            >
+              <img 
+                alt="StaffArc Logo" 
+                loading="lazy" 
+                width="40" 
+                height="40" 
+                decoding="async" 
+                data-nimg="1" 
+                className="h-5 w-5 object-contain" 
+                style={{color:"transparent"}} 
+                srcSet="https://www.staffarc.in/_next/image?url=%2Fimages%2Fstaffarc-logo.png&w=48&q=75 1x, https://www.staffarc.in/_next/image?url=%2Fimages%2Fstaffarc-logo.png&w=96&q=75 2x" 
+                src="https://www.staffarc.in/_next/image?url=%2Fimages%2Fstaffarc-logo.png&w=96&q=75" 
+              />
+              StaffArc
+            </a>
           </div>
+          <p>© {new Date().getFullYear()} సKALA Therapy Center. All rights reserved.</p>
         </div>
       </div>
 

@@ -2,16 +2,16 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { 
   Speech, Brain, Activity, Puzzle, GraduationCap, 
   Phone, ArrowRight, MessageCircle, Target, Users, 
-  Footprints, Heart, Sparkles
+  Footprints, Heart, Sparkles, Lightbulb, Shapes, Smile
 } from "lucide-react";
 import { GlassCard } from "@/components/GlassCard";
 import { Hero3D } from "@/components/Hero3D";
 import { useNavigate } from "react-router-dom";
 
 const services = [
-  { icon: Brain, title: "Behavioral Therapy", path: "/services/behavioral", color: "#c95994" },
-  { icon: Activity, title: "Occupational Therapy", path: "/services/occupational", color: "#4cbbcc" },
-  { icon: Puzzle, title: "Psychotherapies", path: "/services/psychotherapy", color: "#f6b040" },
+  { icon: Smile, title: "Behavioral Therapy", path: "/services/behavioral", color: "#c95994" },
+  { icon: Shapes, title: "Occupational Therapy", path: "/services/occupational", color: "#4cbbcc" },
+  { icon: Lightbulb, title: "Psychotherapies", path: "/services/psychotherapy", color: "#f6b040" },
   { icon: GraduationCap, title: "Special Education", path: "/services/special-education", color: "#4ecc74" },
   { icon: Speech, title: "Speech Therapy", path: "/services/speech", color: "#957fe5" },
 ];

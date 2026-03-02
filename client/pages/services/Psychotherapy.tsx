@@ -52,7 +52,7 @@ const Psychotherapy = () => {
             animate={{ opacity: 1, scale: 1 }} 
             className="relative aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white dark:border-white/10"
           >
-             <img src="/8.jpg" alt="Psychotherapy" className="w-full h-full object-cover" />
+             <img src="/speech1.jpeg" alt="Psychotherapy" className="w-full h-full object-cover" />
              <div className="absolute inset-0 bg-gradient-to-t from-[#c95994]/20 to-transparent" />
           </motion.div>
         </div>
