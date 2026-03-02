@@ -51,7 +51,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#4cbbcc] mb-4">Discovery</h1>
+            <h1 className="text[10px] font-bold uppercase tracking-[0.4em] text-[#4cbbcc] mb-4">Discovery</h1>
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-foreground mb-8 leading-tight">
               About <span className="font-telugu text-[#c95994]">సKALA</span>
             </h2>
@@ -107,7 +107,7 @@ const About = () => {
       <section className="py-32 px-6 bg-[#f5f5f7] dark:bg-white/5 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <span className="text-[#c95994] font-bold text-xs uppercase tracking-widest">Foundation</span>
+            <span className="text-[#c95994] font-bold text-s uppercase tracking-widest">Foundation</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 tracking-tight">Our Philosophy</h2>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
               At సKALA, we believe growth is relational, contextual, and deeply individual.

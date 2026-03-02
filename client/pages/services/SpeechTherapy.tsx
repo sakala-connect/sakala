@@ -82,27 +82,27 @@ const SpeechTherapy = () => {
 
       {/* --- WHO WE SUPPORT --- */}
       <section className="py-32 px-6 max-w-7xl mx-auto">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-    <div className="space-y-8">
-      <h2 className="text-4xl font-bold tracking-tight">Who We <span className="text-[#4cbbcc] italic">Support</span></h2>
-      <p className="text-lg text-muted-foreground leading-relaxed font-medium">
-        Speech therapy services at సKALA support children with a wide range of communication needs, including speech and language delays, autism spectrum disorders, developmental delays, intellectual disabilities, articulation disorders, social communication challenges, and complex communication needs.
-      </p>
-      <p className="p-6 bg-[#4cbbcc]/5 rounded-2xl border-l-4 border-[#4cbbcc] font-bold italic">
-        "Each child is viewed as an individual, and therapy is designed to reflect their unique developmental profile and communication style."
-      </p>
-    </div>
-    
-    {/* Added Image on the Right Side */}
-    <div className="relative">
-      <img 
-        src="/child.jpeg" 
-        alt="Who We Support" 
-        className="rounded-[2.5rem] shadow-2xl w-full object-cover border-4 border-white dark:border-white/10" 
-      />
-    </div>
-  </div>
-</section>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <h2 className="text-4xl font-bold tracking-tight">Who We <span className="text-[#4cbbcc] italic">Support</span></h2>
+            <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+              Speech therapy services at సKALA support children with a wide range of communication needs, including speech and language delays, autism spectrum disorders, developmental delays, intellectual disabilities, articulation disorders, social communication challenges, and complex communication needs.
+            </p>
+            <p className="p-6 bg-[#4cbbcc]/5 rounded-2xl border-l-4 border-[#4cbbcc] font-bold italic">
+              "Each child is viewed as an individual, and therapy is designed to reflect their unique developmental profile and communication style."
+            </p>
+          </div>
+          
+          {/* Added Image on the Right Side */}
+          <div className="relative">
+            <img 
+              src="/child.jpeg" 
+              alt="Who We Support" 
+              className="rounded-[2.5rem] shadow-2xl w-full object-cover border-4 border-white dark:border-white/10" 
+            />
+          </div>
+        </div>
+      </section>
 
       {/* --- OUR CLINICAL PROCESS --- */}
       <section className="py-32 px-6 bg-[#0a0a0b] text-white rounded-[4rem] mx-4 relative overflow-hidden">
@@ -220,13 +220,13 @@ const SpeechTherapy = () => {
       </section>
 
       {/* --- FINAL CTA --- */}
-      <section className="pb-32 px-6">
-        <GlassCard className="max-w-4xl mx-auto p-12 md:p-24 text-center bg-gradient-to-br from-[#c95994] to-[#4cbbcc] text-white border-none rounded-[4rem] relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[80px] rounded-full" />
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 relative z-10">Start finding <br/> their voice.</h2>
+      <section className="pb-16 px-6">
+        <GlassCard className="max-w-3xl mx-auto p-8 md:p-12 text-center bg-gradient-to-br from-[#c95994] to-[#4cbbcc] text-white border-none rounded-[3rem] relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 blur-[60px] rounded-full" />
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 relative z-10 leading-tight">Start finding <br/> their voice.</h2>
           <button 
             onClick={handleConsultation}
-            className="relative z-10 bg-white text-[#c95994] px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-xl"
+            className="relative z-10 bg-white text-[#c95994] px-8 py-3.5 rounded-full font-bold text-sm md:text-base hover:scale-105 transition-all shadow-xl"
           >
             Request Speech Assessment
           </button>

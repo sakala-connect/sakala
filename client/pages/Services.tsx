@@ -61,7 +61,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#4cbbcc] mb-4 block"
+            className="text[10px] font-bold uppercase tracking-[0.4em] text-[#4cbbcc] mb-4 block"
           >
             Our Expertise
           </motion.span>
@@ -120,7 +120,7 @@ const Services = () => {
                 
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 tracking-tight">
                   {service.title}
-                </h3>
+                 </h3>
 
                 <div className="flex flex-wrap gap-3">
                   <button 
@@ -150,14 +150,14 @@ const Services = () => {
         viewport={{ once: true }}
         className="mt-32 px-6 max-w-5xl mx-auto"
       >
-        <GlassCard className="p-12 md:p-16 rounded-[4rem] text-center bg-[#f5f5f7] dark:bg-white/5 border-none shadow-none">
-          <h2 className="text-3xl font-bold mb-6 tracking-tight">Meaningful progress starts here.</h2>
-          <p className="text-muted-foreground mb-10 max-w-xl mx-auto font-medium leading-relaxed">
+        <GlassCard className="max-w-2xl mx-auto p-6 md:p-10 rounded-[2.5rem] text-center bg-[#f5f5f7] dark:bg-white/5 border-none shadow-none">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Meaningful progress starts here.</h2>
+          <p className="text-sm md:text-base text-muted-foreground mb-8 max-w-lg mx-auto font-medium leading-relaxed">
             At స-kala, progress is not measured only by outcomes — but by confidence, connection, and meaningful change.
           </p>
           <button 
             onClick={() => handleWhatsApp("General Inquiry")}
-            className="px-10 py-4 rounded-full bg-[#4cbbcc] text-white font-bold text-[12px] uppercase tracking-widest flex items-center gap-3 mx-auto hover:scale-105 transition-transform shadow-xl hover:shadow-[#4cbbcc]/20"
+            className="px-8 py-3.5 rounded-full bg-[#4cbbcc] text-white font-bold text-[11px] md:text-[12px] uppercase tracking-widest flex items-center gap-3 mx-auto hover:scale-105 transition-transform shadow-xl hover:shadow-[#4cbbcc]/20"
           >
             <MessageCircle size={18} /> Speak with our clinical team
           </button>

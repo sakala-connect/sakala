@@ -33,7 +33,7 @@ const Workshops = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "circOut" }}
           >
-            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-[#4cbbcc] mb-6 block">Beyond the Therapy Room</span>
+            <span className="text[10px] font-bold uppercase tracking-[0.3em] text-[#4cbbcc] mb-6 block">Beyond the Therapy Room</span>
             <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-none text-[#2d2d2d]">
               Creative <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c95994] to-[#4cbbcc] italic">Horizons.</span>
@@ -211,25 +211,25 @@ const Workshops = () => {
       </section>
 
       {/* --- JOIN THE CIRCLE: BRAND GRADIENT CTA --- */}
-      <section className="py-40 px-6 relative">
-        <div className="max-w-6xl mx-auto p-12 md:p-32 rounded-[5rem] bg-gradient-to-br from-[#fdfdfd] to-[#f5f5f7] border border-[#c95994]/20 text-center relative overflow-hidden shadow-2xl">
+      <section className="py-24 px-6 relative">
+        <div className="max-w-5xl mx-auto p-10 md:p-20 rounded-[4rem] bg-gradient-to-br from-[#fdfdfd] to-[#f5f5f7] border border-[#c95994]/20 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#c95994]/5 to-[#4cbbcc]/5 opacity-50" />
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             className="relative z-10"
           >
-            <h2 className="text-4xl md:text-7xl font-bold mb-10 tracking-tight text-[#2d2d2d]">Join the <br/><span className="italic text-[#4cbbcc]">సKALA Circle.</span></h2>
-            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-[#2d2d2d]">Join the <br/><span className="italic text-[#4cbbcc]">సKALA Circle.</span></h2>
+            <p className="text-base md:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
               Whether seeking clarity, a friend, or creative release, our workshops are the bridge to your next breakthrough.
             </p>
             <button 
               onClick={handleJoinCircle}
-              className="px-12 py-6 rounded-full bg-[#c95994] text-white font-bold text-lg hover:bg-[#4cbbcc] transition-all duration-500 shadow-2xl shadow-[#c95994]/30 group flex items-center gap-3 mx-auto"
+              className="px-8 py-4 rounded-full bg-[#c95994] text-white font-bold text-sm hover:bg-[#4cbbcc] transition-all duration-500 shadow-xl shadow-[#c95994]/30 group flex items-center justify-center gap-3 mx-auto"
             >
               Explore Upcoming Workshops <ArrowRight className="group-hover:translate-x-2 transition-transform" />
             </button>
-            <p className="mt-12 text-sm font-bold uppercase tracking-[0.3em] text-[#2d2d2d]/30">
+            <p className="mt-8 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-[#2d2d2d]/30">
               We cultivate the confidence to use your skills
             </p>
           </motion.div>

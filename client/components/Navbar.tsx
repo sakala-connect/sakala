@@ -19,12 +19,13 @@ export const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6">
-      <div className="max-w-7xl mx-auto glass rounded-full px-6 py-2 flex items-center justify-between border border-white/20 shadow-xl bg-white/40 dark:bg-black/40 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto glass rounded-[2.5rem] px-6 py-2 flex items-center justify-between border border-white/20 shadow-xl bg-white/40 dark:bg-black/40 backdrop-blur-md">
         
         <Link to="/" className="flex items-center group">
           <motion.div 
             whileHover={{ scale: 1.05 }}
-            className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-[#4cbbcc] shadow-md bg-white flex items-center justify-center"
+            /* Increased size here: w-16 h-16 for mobile, md:w-20 md:h-20 for desktop */
+            className="relative w-16 h-16 md:w-20 md:h-20 overflow-hidden rounded-full border-2 border-[#4cbbcc] shadow-md bg-white flex items-center justify-center -ml-2"
           >
             <img 
               src="/logo.jpeg" 
@@ -35,7 +36,7 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Menu - Refined Font Sizes */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -54,7 +55,7 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center gap-4 lg:hidden">
           <ThemeToggle />
           <button className="p-2 text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -69,7 +70,7 @@ export const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden absolute top-full left-6 right-6 mt-4 glass rounded-[2rem] p-6 flex flex-col gap-4 shadow-2xl bg-white/95 dark:bg-black/95 border border-white/20"
+            className="lg:hidden absolute top-full left-6 right-6 mt-4 glass rounded-[2rem] p-6 flex flex-col gap-4 shadow-2xl bg-white/95 dark:bg-black/95 border border-white/20"
           >
             {navLinks.map((link) => (
               <Link

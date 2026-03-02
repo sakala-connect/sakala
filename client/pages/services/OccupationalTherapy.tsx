@@ -23,7 +23,7 @@ const OccupationalTherapy = () => {
             transition={{ duration: 0.8 }}
           >
              <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 leading-[1.1]">
-                Occupational Therapy
+               Occupational Therapy
              </h1>
              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed font-medium mb-8 max-w-lg">
                <p>
@@ -157,13 +157,13 @@ const OccupationalTherapy = () => {
       </section>
 
       {/* --- FINAL CTA --- */}
-      <section className="pb-24 px-6">
-        <GlassCard className="max-w-4xl mx-auto p-12 text-center bg-gradient-to-br from-[#c95994] to-[#4cbbcc] text-white border-none rounded-[3.5rem] relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[80px] rounded-full" />
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 relative z-10 leading-tight">Empowering growth <br/> through play today.</h2>
+      <section className="pb-16 px-6">
+        <GlassCard className="max-w-3xl mx-auto p-8 md:p-12 text-center bg-gradient-to-br from-[#c95994] to-[#4cbbcc] text-white border-none rounded-[3rem] relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 blur-[60px] rounded-full" />
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 relative z-10 leading-tight">Empowering growth <br/> through play today.</h2>
           <button 
             onClick={handleConsultation}
-            className="relative z-10 bg-white text-[#c95994] px-10 py-4 rounded-full font-bold text-sm hover:scale-105 transition-all shadow-xl"
+            className="relative z-10 bg-white text-[#c95994] px-8 py-3 rounded-full font-bold text-sm md:text-base hover:scale-105 transition-all shadow-xl"
           >
             Schedule Assessment
           </button>

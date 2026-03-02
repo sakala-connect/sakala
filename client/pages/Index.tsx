@@ -20,8 +20,8 @@ const missionGoals = [
   { icon: Target, title: "Precision Care", text: "Deliver individualized intervention tailored to each child’s needs" },
   { icon: Users, title: "Family Synergy", text: "Partner closely with families through guidance, training, and collaboration" },
   { icon: Footprints, title: "Functional Growth", text: "Build functional skills that support independence in everyday life" },
-  { icon: Heart, title: "Safe Haven", text: "Create structured yet nurturing environments that encourage engagement" },
-  { icon: Sparkles, title: "Holistic Play", text: "Use play, interaction, and therapeutic strategies for development" },
+  { icon: Heart, title: "Safe Space", text: "Create structured yet nurturing environments that encourage engagement" },
+  { icon: Sparkles, title: "Holistic Approach", text: "Using holistic approach, interaction, and therapeutic strategies for overall development" },
 ];
 
 // --- UNIFORM 3D TILT CARD COMPONENT ---
@@ -128,7 +128,7 @@ const Index = () => {
         <div className="container mx-auto px-6 lg:px-20 z-10 pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
-              <h1 className="text-3xl md:text-4xl font-bold text-[#c95994] mb-4 flex items-baseline gap-1 font-telugu">
+              <h1 className="text-5xl md:text-6xl font-bold text-[#c95994] mb-4 flex items-baseline gap-1 font-telugu">
                 స<span className="font-sans font-semibold tracking-tighter">KALA</span>
               </h1>
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.05] mb-8">
@@ -227,16 +227,16 @@ const Index = () => {
       </section>
 
       {/* --- FOOTER CTA --- */}
-      <section className="py-24 px-6">
-        <GlassCard className="max-w-5xl mx-auto bg-[#c95994] text-white border-none p-12 md:p-20 text-center overflow-hidden relative shadow-2xl rounded-[3rem]">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#f6b040]/30 blur-[100px] rounded-full -mr-40 -mt-40" />
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 relative z-10 leading-tight tracking-tight">Ready to start?</h2>
-          <div className="flex flex-col md:flex-row gap-6 justify-center relative z-10">
-            <button onClick={() => handleWhatsAppRedirect("Consultation request")} className="bg-white text-[#c95994] px-10 py-4 rounded-full font-bold text-lg hover:scale-105 hover:bg-[#f6b040] hover:text-white transition-all shadow-lg flex items-center justify-center gap-3">
-              <Phone size={20} /> Book Consultation
+      <section className="py-16 px-6">
+        <GlassCard className="max-w-4xl mx-auto bg-[#c95994] text-white border-none p-8 md:p-12 text-center overflow-hidden relative shadow-2xl rounded-[2.5rem]">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#f6b040]/30 blur-[80px] rounded-full -mr-32 -mt-32" />
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 relative z-10 leading-tight tracking-tight">Ready to begin your journey?</h2>
+          <div className="flex flex-col md:flex-row gap-4 justify-center relative z-10">
+            <button onClick={() => handleWhatsAppRedirect("Consultation request")} className="bg-white text-[#c95994] px-8 py-3.5 rounded-full font-bold text-base hover:scale-105 hover:bg-[#f6b040] hover:text-white transition-all shadow-lg flex items-center justify-center gap-2">
+              <Phone size={18} /> Book Consultation
             </button>
-            <button onClick={() => navigate('/contact')} className="bg-white/10 border border-white/30 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-3">
-              <MessageCircle size={20} /> Contact Us
+            <button onClick={() => navigate('/contact')} className="bg-white/10 border border-white/30 px-8 py-3.5 rounded-full font-bold text-base hover:bg-white/20 transition-all flex items-center justify-center gap-2">
+              <MessageCircle size={18} /> Contact Us
             </button>
           </div>
         </GlassCard>

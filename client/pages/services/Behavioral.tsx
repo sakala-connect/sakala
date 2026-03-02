@@ -20,7 +20,7 @@ const Behavioral = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[1.05]">
-                Behavior <br/><span className="text-[#c95994] italic font-medium">Therapy</span>
+               Behavior <br/><span className="text-[#c95994] italic font-medium">Therapy</span>
              </h1>
              <div className="space-y-6 text-xl text-muted-foreground leading-relaxed font-medium mb-10 max-w-lg">
                <p>
@@ -54,7 +54,7 @@ const Behavioral = () => {
       <section className="py-24 px-6 bg-[#f5f5f7] dark:bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase tracking-widest text-[#c95994]">Understanding the "Why"</h2>
+            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-widest text-[#c95994]">Understanding the "Why"</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               Behavior therapy is not about control; it is about understanding the underlying needs.
             </p>
@@ -96,22 +96,7 @@ const Behavioral = () => {
               </p>
             </div>
             
-            <div className="pt-10 border-t border-black/5">
-              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#4cbbcc] mb-6">Holistic Development</h4>
-              <p className="text-muted-foreground mb-8">Integrated within our Learning & Development Center, behavior therapy works hand-in-hand with other supports. We utilize:</p>
-              <div className="space-y-4">
-                {[
-                  { title: "Visual Schedules", desc: "To provide predictability and reduce anxiety" },
-                  { title: "Sensory Strategies", desc: "To help children stay calm and focused" },
-                  { title: "Social Scripts", desc: "To help navigate complex social interactions" }
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4 group">
-                    <div className="mt-1.5 w-2 h-2 rounded-full bg-[#4cbbcc] group-hover:scale-125 transition-transform" />
-                    <p className="text-foreground/80 font-bold text-sm">{item.title}: <span className="font-medium text-muted-foreground">{item.desc}</span></p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            
           </div>
 
           <div className="bg-[#f5f5f7] dark:bg-white/5 p-10 md:p-16 rounded-[4rem]">
@@ -207,7 +192,7 @@ const Behavioral = () => {
               </div>
 
               <div className="p-10 rounded-[3rem] bg-[#c95994]/5 border border-[#c95994]/10">
-                <h4 className="text-sm font-bold uppercase tracking-widest text-[#c95994] mb-8">Types of Assessments We Offer</h4>
+                <h4 className="text-sm font-bold tracking-widest text-[#c95994] mb-8">Types of Assessments We Offer</h4>
                 <div className="space-y-4">
                   {[
                     "Developmental & Diagnostic Assessments : For Autism (ASD), ADHD, developmental delays, and attention or executive functioning concerns", "Cognitive & IQ Testing: To understand intellectual abilities, strengths, memory, and learning styles.", 
@@ -274,13 +259,13 @@ const Behavioral = () => {
       </section>
 
       {/* --- FINAL CTA --- */}
-      <section className="pb-32 px-6">
-        <GlassCard className="max-w-4xl mx-auto p-12 md:p-24 text-center bg-gradient-to-br from-[#c95994] to-[#4cbbcc] text-white border-none rounded-[4rem] relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[80px] rounded-full" />
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 relative z-10">Start your discovery journey today.</h2>
+      <section className="pb-16 px-6">
+        <GlassCard className="max-w-4xl mx-auto p-8 md:p-12 text-center bg-gradient-to-br from-[#c95994] to-[#4cbbcc] text-white border-none rounded-[3rem] relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 blur-[60px] rounded-full" />
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 relative z-10">Start your discovery journey today.</h2>
           <button 
             onClick={handleConsultation}
-            className="relative z-10 bg-white text-[#c95994] px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-xl"
+            className="relative z-10 bg-white text-[#c95994] px-10 py-4 rounded-full font-bold text-base md:text-lg hover:scale-105 transition-all shadow-xl"
           >
             Request an Evaluation
           </button>
