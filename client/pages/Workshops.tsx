@@ -20,7 +20,7 @@ const Workshops = () => {
   };
 
   return (
-    <div ref={containerRef} className="w-full bg-white font-sans selection:bg-[#4cbbcc]/30">
+    <div ref={containerRef} className="w-full bg-white dark:bg-[#0a0a0b] font-sans selection:bg-[#4cbbcc]/30 overflow-x-hidden">
       
       {/* --- PREMIUM HERO: SCROLL-REVEAL --- */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
@@ -33,8 +33,8 @@ const Workshops = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "circOut" }}
           >
-            <span className="text[10px] font-bold uppercase tracking-[0.3em] text-[#4cbbcc] mb-6 block">Beyond the Therapy Room</span>
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-none text-[#2d2d2d]">
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#4cbbcc] mb-6 block">Beyond the Therapy Room</span>
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-none text-[#2d2d2d] dark:text-white">
               Creative <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c95994] to-[#4cbbcc] italic">Horizons.</span>
             </h1>
@@ -63,8 +63,8 @@ const Workshops = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-[#c95994] font-bold text-xs uppercase tracking-widest mb-4">01. Parent Empowerment Series (PES)</h2>
-              <h3 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">From "Managing" <br/> to <span className="italic font-medium text-[#4cbbcc]">Connecting.</span></h3>
+              <h2 className="text-[#c95994] font-bold text-xs tracking-widest mb-4">01. Parent Empowerment Series (PES)</h2>
+              <h3 className="text-4xl md:text-5xl font-bold mb-8 leading-tight dark:text-white">From "Managing" <br/> to <span className="italic font-medium text-[#4cbbcc]">Connecting.</span></h3>
               <p className="text-lg text-muted-foreground leading-relaxed font-medium">
                 Parenting a neurodivergent child requires a unique toolkit. Our workshops move away from clinical jargon to provide practical, heart-centered strategies.
               </p>
@@ -85,12 +85,12 @@ const Workshops = () => {
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
               >
-                <GlassCard className="p-8 group border-none bg-[#f5f5f7] hover:bg-white transition-all duration-500 rounded-[2.5rem] flex items-center gap-8 shadow-none hover:shadow-2xl">
-                  <div className="w-16 h-16 rounded-2xl bg-white shadow-inner flex items-center justify-center text-[#4cbbcc] group-hover:bg-[#4cbbcc] group-hover:text-white transition-all duration-500">
+                <GlassCard className="p-8 group border-none bg-[#f5f5f7] dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 transition-all duration-500 rounded-[2.5rem] flex items-center gap-8 shadow-none hover:shadow-2xl">
+                  <div className="w-16 h-16 rounded-2xl bg-white dark:bg-black/20 shadow-inner flex items-center justify-center text-[#4cbbcc] group-hover:bg-[#4cbbcc] group-hover:text-white transition-all duration-500">
                     <item.icon size={28} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2 tracking-tight text-[#2d2d2d]">{item.t}</h4>
+                    <h4 className="text-xl font-bold mb-2 tracking-tight text-[#2d2d2d] dark:text-white">{item.t}</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed font-medium">{item.d}</p>
                   </div>
                 </GlassCard>
@@ -101,11 +101,11 @@ const Workshops = () => {
       </section>
 
       {/* --- 2. CHILD & ADOLESCENT: LOGO BRANDED SECTION --- */}
-      <section className="py-32 px-6 bg-[#c95994]/5 rounded-[4rem] mx-4 overflow-hidden relative border border-[#c95994]/10">
+      <section className="py-32 px-6 bg-[#c95994]/5 dark:bg-[#c95994]/10 rounded-[4rem] mx-4 overflow-hidden relative border border-[#c95994]/10">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-24">
-            <h2 className="text-[#c95994] font-bold text-xs uppercase tracking-[0.3em] mb-4">02. Child & Adolescent Workshops</h2>
-            <h3 className="text-4xl md:text-6xl font-bold tracking-tight text-[#2d2d2d]">Skill-Building Through <span className="italic text-[#c95994]">Play.</span></h3>
+            <h2 className="text-[#c95994] font-bold text-xs tracking-[0.3em] mb-4">02. Child & Adolescent Workshops</h2>
+            <h3 className="text-4xl md:text-6xl font-bold tracking-tight text-[#2d2d2d] dark:text-white">Skill-Building Through <span className="italic text-[#c95994]">Play.</span></h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -117,14 +117,14 @@ const Workshops = () => {
               <motion.div
                 key={i}
                 whileHover={{ y: -20 }}
-                className="p-10 rounded-[3rem] bg-white border border-[#c95994]/10 backdrop-blur-xl flex flex-col items-center text-center group shadow-sm hover:shadow-xl transition-all"
+                className="p-10 rounded-[3rem] bg-white dark:bg-white/5 border border-[#c95994]/10 backdrop-blur-xl flex flex-col items-center text-center group shadow-sm hover:shadow-xl transition-all"
               >
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#4cbbcc] to-[#c95994] p-[1px] mb-8 group-hover:scale-110 transition-transform">
-                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                  <div className="w-full h-full rounded-full bg-white dark:bg-[#0a0a0b] flex items-center justify-center">
                     <card.icon size={32} className="text-[#4cbbcc]" />
                   </div>
                 </div>
-                <h4 className="text-2xl font-bold mb-4 text-[#2d2d2d]">{card.t}</h4>
+                <h4 className="text-2xl font-bold mb-4 text-[#2d2d2d] dark:text-white">{card.t}</h4>
                 <p className="text-muted-foreground leading-relaxed font-medium">{card.d}</p>
               </motion.div>
             ))}
@@ -132,13 +132,13 @@ const Workshops = () => {
         </div>
       </section>
 
-      {/* --- 3. CREATIVE STUDIO: BRAND ACCENTED --- */}
+      {/* --- 3. CREATIVE STUDIO --- */}
       <section className="py-40 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="order-2 lg:order-1 relative">
             <div className="grid grid-cols-2 gap-4">
               <motion.div initial={{ y: 20 }} whileInView={{ y: -20 }} transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }} className="space-y-4">
-                <div className="aspect-[3/4] rounded-3xl bg-[#f5f5f7] overflow-hidden border border-[#4cbbcc]/20">
+                <div className="aspect-[3/4] rounded-3xl bg-[#f5f5f7] dark:bg-white/5 overflow-hidden border border-[#4cbbcc]/20">
                   <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80" className="w-full h-full object-cover" alt="Art Workshop" />
                 </div>
                 <div className="aspect-square rounded-3xl bg-[#c95994]/10 flex items-center justify-center text-[#c95994]">
@@ -149,7 +149,7 @@ const Workshops = () => {
                 <div className="aspect-square rounded-3xl bg-[#4cbbcc]/10 flex items-center justify-center text-[#4cbbcc]">
                   <Mic2 size={48} strokeWidth={1} />
                 </div>
-                <div className="aspect-[3/4] rounded-3xl bg-[#f5f5f7] overflow-hidden border border-[#c95994]/20">
+                <div className="aspect-[3/4] rounded-3xl bg-[#f5f5f7] dark:bg-white/5 overflow-hidden border border-[#c95994]/20">
                   <img src="/music.jpeg" className="w-full h-full object-cover" alt="Rhythm Workshop" />
                 </div>
               </motion.div>
@@ -158,8 +158,8 @@ const Workshops = () => {
 
           <div className="order-1 lg:order-2 space-y-12">
             <div>
-              <h2 className="text-[#4cbbcc] font-bold text-xs uppercase tracking-widest mb-4">03. The Creative Expression Studio</h2>
-              <h3 className="text-5xl font-bold mb-6 text-[#2d2d2d]">Where Words Aren't <br/><span className="italic text-[#c95994]">the Only Way.</span></h3>
+              <h2 className="text-[#4cbbcc] font-bold text-xs tracking-widest mb-4">03. The Creative Expression Studio</h2>
+              <h3 className="text-5xl font-bold mb-6 text-[#2d2d2d] dark:text-white">Where Words Aren't <br/><span className="italic text-[#c95994]">the Only Way.</span></h3>
               <p className="text-lg text-muted-foreground leading-relaxed font-medium">For many, traditional talk therapy has limits. Our creative workshops provide alternative pathways for the soul to speak.</p>
             </div>
 
@@ -172,7 +172,7 @@ const Workshops = () => {
                 <div key={i} className="flex gap-6 group cursor-default">
                   <div className="text-2xl font-bold text-[#c95994]/30 group-hover:text-[#c95994] transition-colors">0{i+1}</div>
                   <div>
-                    <h4 className="text-xl font-bold mb-1 tracking-tight text-[#2d2d2d]">{item.t}</h4>
+                    <h4 className="text-xl font-bold mb-1 tracking-tight text-[#2d2d2d] dark:text-white">{item.t}</h4>
                     <p className="text-muted-foreground font-medium text-sm">{item.d}</p>
                   </div>
                 </div>
@@ -183,11 +183,11 @@ const Workshops = () => {
       </section>
 
       {/* --- 4. MENTAL HEALTH: CYAN THEMED --- */}
-      <section className="py-32 px-6 bg-[#4cbbcc]/5 rounded-[4rem] mx-4 overflow-hidden border border-[#4cbbcc]/10">
+      <section className="py-32 px-6 bg-[#4cbbcc]/5 dark:bg-[#4cbbcc]/10 rounded-[4rem] mx-4 overflow-hidden border border-[#4cbbcc]/10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-            <h2 className="text-[#4cbbcc] font-bold text-xs uppercase tracking-widest mb-4">04. Mental Health & Wellness for All</h2>
-            <h3 className="text-4xl font-bold text-[#2d2d2d]">Demystifying Mind’s Health</h3>
+            <h2 className="text-[#4cbbcc] font-bold text-xs tracking-widest mb-4">04. Mental Health & Wellness for All</h2>
+            <h3 className="text-4xl font-bold text-[#2d2d2d] dark:text-white">Demystifying Mind’s Health</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -199,10 +199,10 @@ const Workshops = () => {
               <motion.div 
                 key={i}
                 whileHover={{ scale: 1.05 }}
-                className="p-12 rounded-[4rem] bg-white shadow-xl shadow-[#4cbbcc]/5 flex flex-col items-start gap-8 border border-[#4cbbcc]/5"
+                className="p-12 rounded-[4rem] bg-white dark:bg-white/5 shadow-xl shadow-[#4cbbcc]/5 flex flex-col items-start gap-8 border border-[#4cbbcc]/5"
               >
                 <item.icon size={40} className="text-[#4cbbcc]" strokeWidth={1.5} />
-                <h4 className="text-2xl font-bold leading-tight text-[#2d2d2d]">{item.t}</h4>
+                <h4 className="text-2xl font-bold leading-tight text-[#2d2d2d] dark:text-white">{item.t}</h4>
                 <p className="text-muted-foreground font-medium leading-relaxed">{item.d}</p>
               </motion.div>
             ))}
@@ -210,16 +210,16 @@ const Workshops = () => {
         </div>
       </section>
 
-      {/* --- JOIN THE CIRCLE: BRAND GRADIENT CTA --- */}
+      {/* --- JOIN THE CIRCLE --- */}
       <section className="py-24 px-6 relative">
-        <div className="max-w-5xl mx-auto p-10 md:p-20 rounded-[4rem] bg-gradient-to-br from-[#fdfdfd] to-[#f5f5f7] border border-[#c95994]/20 text-center relative overflow-hidden shadow-2xl">
+        <div className="max-w-5xl mx-auto p-10 md:p-20 rounded-[4rem] bg-gradient-to-br from-[#fdfdfd] to-[#f5f5f7] dark:from-white/5 dark:to-white/10 border border-[#c95994]/20 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#c95994]/5 to-[#4cbbcc]/5 opacity-50" />
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             className="relative z-10"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-[#2d2d2d]">Join the <br/><span className="italic text-[#4cbbcc]">సKALA Circle.</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-[#2d2d2d] dark:text-white">Join the <br/><span className="italic text-[#4cbbcc]">సKALA Circle.</span></h2>
             <p className="text-base md:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
               Whether seeking clarity, a friend, or creative release, our workshops are the bridge to your next breakthrough.
             </p>
@@ -229,7 +229,7 @@ const Workshops = () => {
             >
               Explore Upcoming Workshops <ArrowRight className="group-hover:translate-x-2 transition-transform" />
             </button>
-            <p className="mt-8 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-[#2d2d2d]/30">
+            <p className="mt-8 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-[#2d2d2d]/30 dark:text-white/30">
               We cultivate the confidence to use your skills
             </p>
           </motion.div>
