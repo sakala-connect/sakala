@@ -3,7 +3,7 @@ import {
   Brain, Heart, Puzzle, Users, CheckCircle2, MessageCircle, 
   PlayCircle, ShieldCheck, Search, ClipboardList, TrendingUp, 
   GraduationCap, Stethoscope, Briefcase, UserCheck, Calendar,
-  ArrowRight, FileText, Activity,Sparkles
+  ArrowRight, FileText, Activity, Sparkles
 } from "lucide-react";
 import { GlassCard } from "@/components/GlassCard";
 
@@ -31,14 +31,14 @@ const Behavioral = () => {
                </p>
              </div>
              <div className="p-6 rounded-3xl bg-[#4cbbcc]/5 border-l-4 border-[#4cbbcc] mb-10">
-                <p className="text-sm font-bold uppercase tracking-widest text-[#4cbbcc] mb-2">Who we support:</p>
+                <p className="text-sm font-bold tracking-widest text-[#4cbbcc] mb-2">Who we support:</p>
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  Autism Spectrum Disorder (ASD), Attention Deficit Hyperactivity Disorder (ADHD), Cognitive Skill Deficits, Emotional and Social challenges, sensory processing needs, and various behavioral challenges.
+                  Persons with Autism Spectrum Disorder (ASD), Attention Deficit Hyperactivity Disorder (ADHD), Cognitive Skill Deficits, Emotional and Social challenges, sensory processing needs, and various behavioral challenges.
                 </p>
              </div>
              <button 
                 onClick={handleConsultation}
-                className="bg-[#4cbbcc] text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-widest flex items-center gap-3 hover:scale-105 transition-all shadow-xl shadow-[#4cbbcc]/20"
+                className="bg-[#4cbbcc] text-white px-10 py-4 rounded-full font-bold text-sm tracking-widest flex items-center gap-3 hover:scale-105 transition-all shadow-xl shadow-[#4cbbcc]/20"
              >
                <Calendar size={18} /> Book Consultation
              </button>
@@ -54,7 +54,7 @@ const Behavioral = () => {
       <section className="py-24 px-6 bg-[#f5f5f7] dark:bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-widest text-[#c95994]">Understanding the "Why"</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-widest text-[#c95994]">Understanding the "Why"</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               Behavior therapy is not about control; it is about understanding the underlying needs.
             </p>
@@ -95,8 +95,6 @@ const Behavioral = () => {
                 We ensure that every intervention respects the child’s dignity and personality.
               </p>
             </div>
-            
-            
           </div>
 
           <div className="bg-[#f5f5f7] dark:bg-white/5 p-10 md:p-16 rounded-[4rem]">
@@ -195,14 +193,19 @@ const Behavioral = () => {
                 <h4 className="text-sm font-bold tracking-widest text-[#c95994] mb-8">Types of Assessments We Offer</h4>
                 <div className="space-y-4">
                   {[
-                    "Developmental & Diagnostic Assessments : For Autism (ASD), ADHD, developmental delays, and attention or executive functioning concerns", "Cognitive & IQ Testing: To understand intellectual abilities, strengths, memory, and learning styles.", 
-                    "Educational & Psycho-educational Assessments:To identify Dyslexia, Dyscalculia, Dysgraphia, and academic challenges", "Social, Emotional & Behavioral Assessment:To evaluate anxiety, depression, mood, stress, anger, and behavioral concerns.",
-                    "Adult Psychological Assessments:For workplace stress, burnout, personality patterns, relationship difficulties, and mental health screening", "Personality Assessment:To understand personality traits, coping styles, and interpersonal patterns.",
-                    "Career & Vocational Guidance:To identify interests, aptitude, and suitable career paths", "Parenting & Family Assessment:To understand family dynamics and child-parent interactions.",
-                    "Screening & Early Identification:Early detection of developmental, emotional, or behavioral concerns."
-                  ].map((type) => (
-                    <div key={type} className="flex items-center gap-3 text-xs font-bold text-foreground/70 uppercase tracking-wide">
-                      <ArrowRight size={14} className="text-[#c95994]" /> {type}
+                    { t: "Developmental & Diagnostic Assessments", d: "For Autism (ASD), ADHD, developmental delays, and attention or executive functioning concerns" },
+                    { t: "Cognitive & IQ Testing", d: "To understand intellectual abilities, strengths, memory, and learning styles." },
+                    { t: "Educational & Psycho-educational Assessments", d: "To identify Dyslexia, Dyscalculia, Dysgraphia, and academic challenges" },
+                    { t: "Social, Emotional & Behavioral Assessment", d: "To evaluate anxiety, depression, mood, stress, anger, and behavioral concerns." },
+                    { t: "Adult Psychological Assessments", d: "For workplace stress, burnout, personality patterns, relationship difficulties, and mental health screening" },
+                    { t: "Personality Assessment", d: "To understand personality traits, coping styles, and interpersonal patterns." },
+                    { t: "Career & Vocational Guidance", d: "To identify interests, aptitude, and suitable career paths" },
+                    { t: "Parenting & Family Assessment", d: "To understand family dynamics and child-parent interactions." },
+                    { t: "Screening & Early Identification", d: "Early detection of developmental, emotional, or behavioral concerns." }
+                  ].map((item) => (
+                    <div key={item.t} className="flex items-start gap-3 text-xs font-semibold text-foreground/70 tracking-wide">
+                      <ArrowRight size={14} className="text-[#c95994] mt-0.5 shrink-0" /> 
+                      <p>{item.t}: <span className="font-normal">{item.d}</span></p>
                     </div>
                   ))}
                 </div>
@@ -217,8 +220,8 @@ const Behavioral = () => {
               <table className="w-full text-left border-collapse bg-white dark:bg-black/20">
                 <thead>
                   <tr className="bg-[#f5f5f7] dark:bg-white/5">
-                    <th className="p-8 text-sm font-bold uppercase tracking-widest text-[#4cbbcc]">Stage</th>
-                    <th className="p-8 text-sm font-bold uppercase tracking-widest text-[#4cbbcc]">What to Expect</th>
+                    <th className="p-8 text-sm font-bold tracking-widest text-[#4cbbcc]">Stage</th>
+                    <th className="p-8 text-sm font-bold tracking-widest text-[#4cbbcc]">What to Expect</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-black/5">
@@ -250,7 +253,7 @@ const Behavioral = () => {
                <p>We focus on strengths, growth, and long-term well-being. We don’t just provide answers — we provide direction.</p>
                <div className="pt-10">
                  <p className="text-3xl font-bold text-[#c95994] tracking-tight italic">
-                    "At సKALA, we don't just provide answers; we provide a way forward."
+                   "At సKALA, we don't just provide answers; we provide a way forward."
                  </p>
                </div>
              </div>
