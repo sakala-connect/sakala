@@ -3,16 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GlassCard } from "@/components/GlassCard";
 import { Phone, MapPin, Mail, Clock, Send, CheckCircle2, ExternalLink, ChevronDown } from "lucide-react";
 
+// 1. Updated the services list to only include the 5 specified services + "Other"
 const services = [
-  "Speech/Language Therapy",
-  "Behavioural Therapy",
+  "Behavioral Therapy",
   "Occupational Therapy",
-  "Special Education",
-  "Social Skills Training",
-  "Psychoeducational Assessment",
-  "Psychological Assessment",
   "Psychotherapy",
-  "Counselling",
+  "Speech Therapy",
+  "Special Education",
   "Other"
 ];
 
@@ -121,11 +118,11 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">Name</label>
-                  <input name="name" required type="text" placeholder="Your Name" className="w-full bg-white/50 rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-primary transition-all shadow-sm" />
+                  <input name="name" required type="text" placeholder="Your Name" className="w-full bg-white/50 dark:bg-white/5 rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-primary transition-all shadow-sm" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">Phone</label>
-                  <input name="phone" required type="tel" placeholder="Phone Number" className="w-full bg-white/50 rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-primary transition-all shadow-sm" />
+                  <input name="phone" required type="tel" placeholder="Phone Number" className="w-full bg-white/50 dark:bg-white/5 rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-primary transition-all shadow-sm" />
                 </div>
               </div>
 
@@ -137,10 +134,12 @@ const Contact = () => {
                     required
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
-                    className="w-full bg-white/50 rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-primary transition-all appearance-none cursor-pointer font-medium text-foreground/80 pr-10 shadow-sm"
+                    // 2. Added dark:bg-white/5 and dark:text-white to ensure text is visible in dark mode
+                    className="w-full bg-white/50 dark:bg-white/5 rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-primary transition-all appearance-none cursor-pointer font-medium text-foreground/80 dark:text-white pr-10 shadow-sm"
                   >
-                    <option value="" disabled>Choose a service</option>
-                    {services.map(s => <option key={s} value={s}>{s}</option>)}
+                    {/* Added text-black to options to ensure dropdown list items are visible in dark mode browsers that inherit parent colors improperly */}
+                    <option value="" disabled className="text-black">Choose a service</option>
+                    {services.map(s => <option key={s} value={s} className="text-black">{s}</option>)}
                   </select>
                   <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground group-focus-within:text-primary">
                     <ChevronDown size={20} />
@@ -163,7 +162,7 @@ const Contact = () => {
                       value={otherService}
                       onChange={(e) => setOtherService(e.target.value)}
                       placeholder="Please describe..."
-                      className="w-full bg-white/80 rounded-xl px-4 py-3 outline-none border-2 border-primary/30 focus:border-primary transition-all shadow-sm" 
+                      className="w-full bg-white/80 dark:bg-white/10 rounded-xl px-4 py-3 outline-none border-2 border-primary/30 focus:border-primary transition-all shadow-sm" 
                     />
                   </motion.div>
                 )}
@@ -171,7 +170,7 @@ const Contact = () => {
 
               <div className="space-y-2">
                 <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">Message</label>
-                <textarea name="message" required rows={4} placeholder="Tell us how we can help..." className="w-full bg-white/50 rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-primary transition-all resize-none shadow-sm"></textarea>
+                <textarea name="message" required rows={4} placeholder="Tell us how we can help..." className="w-full bg-white/50 dark:bg-white/5 rounded-xl px-4 py-3 outline-none border-2 border-transparent focus:border-primary transition-all resize-none shadow-sm"></textarea>
               </div>
               
               <button type="submit" className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/20">
@@ -198,17 +197,17 @@ const Contact = () => {
         </div>
         
         <div className="h-[400px] md:h-[550px] w-full rounded-[2.5rem] overflow-hidden border-4 border-white shadow-2xl relative">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4610931640686!2d78.3349204!3d17.4376314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9384c165c0d1%3A0x89ee95f67d7177c2!2sTranquil%20Autumn%20Treats!5e0!3m2!1sen!2sin!4v1772387288769!5m2!1sen!2sin"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    allowFullScreen
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    className="w-full h-full"
-  ></iframe>
-</div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4610931640686!2d78.3349204!3d17.4376314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9384c165c0d1%3A0x89ee95f67d7177c2!2sTranquil%20Autumn%20Treats!5e0!3m2!1sen!2sin!4v1772387288769!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full"
+          ></iframe>
+        </div>
       </section>
     </div>
   );
