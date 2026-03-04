@@ -42,7 +42,7 @@ const Contact = () => {
   const mapUrl = "https://www.google.com/maps/place/TNGO's+Colony+Phase+2,+Gachibowli,+Hyderabad,+Telangana+500032";
 
   return (
-    <div className="pt-20">
+    <div className="pt-32">
       <AnimatePresence>
         {submitted && (
           <motion.div
